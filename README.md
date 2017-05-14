@@ -8,7 +8,11 @@ Install `mermaid`:
 Install PhantomJS (not required on travis):
 > npm install -g phantomjs
 
-## generate images
+## Generate Images
 > cd docs/models
 
 > ./generate-images.sh
+
+## Result
+That's how a generated result looks like:
+![setup procedure](docs/images/setup-procedure.mmd.png)
