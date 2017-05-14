@@ -1,0 +1,2 @@
+npm install -g mermaid
+npm install -g phantomjs #not required on travis

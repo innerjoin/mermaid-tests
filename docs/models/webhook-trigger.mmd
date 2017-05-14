@@ -1,0 +1,6 @@
+sequenceDiagram
+GitLab ->> App: Issue or comment webhook triggered
+Note left of App: App analyzes incoming call
+App ->> RTC: CRUD Work Item
+App -->> GitLab: OK / failed
+Note left of App: ...not yet finished....

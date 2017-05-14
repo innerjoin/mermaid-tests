@@ -1,0 +1,15 @@
+sequenceDiagram
+Note left of App: Authenticate user (configurable OAuth / OIDC provider ?)
+App ->> DB: query GitLab / RTC instances
+DB -->> App: list of RTC servers
+DB -->> App: list of GitLab servers
+Note left of App: User selects the right servers
+App ->> RTC: request users project/team areas
+RTC -->> App: list of project/team areas accessible for specific user
+App ->> GitLab: Authenticate
+App ->> GitLab: get repositories
+GitLab -->> App: list of available (not yet used) repos
+App ->> GitLab: Obtain an access token for repo
+GitLab -->> DB: store Access token (per gl server, repo and user)
+Note left of App: Allow the user to do some default config (tbd)
+App ->> GitLab: store target project/team area, owner, and config into deticated file in GitLab (.rtc-config.yml)
